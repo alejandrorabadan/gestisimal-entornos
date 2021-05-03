@@ -18,7 +18,7 @@ import java.util.Scanner;
  * <li> 9.Importar almacen como fichero XML<li>
  * <li> 10.Exportar almacen como fichero JSON<li>
  * <li> 11.Finalizar
- * 
+ * </ol>
  * @author alejandro
  *
  */

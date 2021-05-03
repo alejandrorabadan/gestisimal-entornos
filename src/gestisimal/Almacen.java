@@ -30,16 +30,45 @@ import javax.xml.parsers.DocumentBuilderFactory;
  * @author Alejandro Rabadan Rivas
  */
 public class Almacen{
-
+  /**
+   * Almacen crear articulo XML (String)
+   */
   private final static String ALMACEN = "almacen";
+  /**
+   * Articulo crear articulo XML (String)
+   */
   private final static String ARTICULO = "articulo";
+  /**
+   * Codigo crear articulo XML (String)
+   */
   private final static String CODIGO = "codigo";
+  /**
+   * Descripcion crear articulo XML (String)
+   */
   private final static String DESCRIPCION = "descripcion";
+  /**
+   * Precio de compra crear articulo XML (String)
+   */
   private final static String PRECIO_COMPRA = "precioCompra";
+  /**
+   * Precio de venta crear articulo XML (String)
+   */
   private final static String PRECIO_VENTA = "precioVenta";
+  /**
+   * Cantidad de unidades crear articulo XML (String)
+   */
   private final static String CANTIDAD_UNIDADES = "cantidadUnidades";
+  /**
+   * Stock de seguridad crear articulo XML (String)
+   */
   private final static String STOCK_SEGURIDAD = "stockSeguridad";
+  /**
+   * Stock maximo crear articulo XML (String)
+   */
   private final static String STOCK_MAXIMO = "stockMaximo";
+  /**
+   * CSV HEAD crear articulo XML (String)
+   */
   private static final String CSV_HEAD = "descripcion,precioCompra,precioVenta,cantidadUnidades,stockSeguridad,stockMaximo";
   /**
    * Almacen de los arituclos

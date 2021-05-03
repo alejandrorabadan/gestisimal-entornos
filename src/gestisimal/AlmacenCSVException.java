@@ -2,7 +2,7 @@ package gestisimal;
 
 /**
  * 
- * Excepcion CSV checked
+ * CSV checked
  * @author alejandro
  *
  */

@@ -1,8 +1,7 @@
 package gestisimal;
 
-@SuppressWarnings("serial")
 /**
- * Excepcion Xml checked
+ * Xml checked
  * @author alejandro
  *
  */
