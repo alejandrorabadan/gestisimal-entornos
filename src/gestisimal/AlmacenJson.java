@@ -17,7 +17,7 @@ public class AlmacenJson {
    * 
    * @param almacen Arraylist almacen
    * @param fileName Nombre del archivo
-   * @throws IOException
+   * @throws IOException Entrada o salida del archivo
    */
   static void save (ArrayList<Articulo> almacen, String fileName) throws IOException{
     Gson gson = new Gson();
