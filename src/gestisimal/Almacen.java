@@ -106,7 +106,7 @@ public class Almacen{
   
   /**
    * 
-   * @param codigo
+   * @param codigo codigo
    * @return true si ha eliminado el articulo del codigo pasado
    */
 
@@ -118,8 +118,8 @@ public class Almacen{
   
   /**
    * 
-   * @param unidades
-   * @param codigo
+   * @param unidades unidades
+   * @param codigo codigo
    * @throws CantidadEsMenorQueCeroException Si la cantidad de unidades pasadas para incrementar son menor que cero no se puede incrementar
    */
 
@@ -129,8 +129,8 @@ public class Almacen{
   
   /**
    * 
-   * @param unidades
-   * @param codigo
+   * @param unidades unidades a decrementar
+   * @param codigo codigo
    * @throws UnidadesArticuloEsMenorQueCeroException Si el articulo al decrementar se queda con unidades negativas 
    */
 
@@ -149,7 +149,7 @@ public class Almacen{
   /**
    * 
    * @param fileName Nombre del archivo
-   * @throws IOException
+   * @throws IOException entrada o salida
    */
   public void saveJson(String fileName) throws IOException{
     AlmacenJson.save(almacen,fileName);
@@ -158,7 +158,7 @@ public class Almacen{
   /**
    * 
    * @param fileName Nombre del archivo
-   * @throws IOException
+   * @throws IOException entrada o salida
    */
   public void saveCSV(String fileName) throws IOException {
     var file = Files.newBufferedWriter(Paths.get(fileName), StandardOpenOption.CREATE);
@@ -171,9 +171,9 @@ public class Almacen{
 
   /**
    * 
-   * @param articulo 
-   * @param file
-   * @throws IOException
+   * @param articulo articulo
+   * @param file archivo
+   * @throws IOException entrada o salida
    */
   private void saveArticuloCSV(Articulo articulo, BufferedWriter file) throws IOException {
     file.write("\"" + articulo.getDescripcion() + "\",");
@@ -189,7 +189,7 @@ public class Almacen{
   /**
    * 
    * @param file Nombre del archivo
-   * @throws IOException
+   * @throws IOException entrada o salida
    */
 
   private void saveHeadCSV(BufferedWriter file) throws IOException {
@@ -200,10 +200,10 @@ public class Almacen{
 
   /**
    * 
-   * @param fileName
-   * @throws IOException
-   * @throws AlmacenCSVException
-   * @throws UnidadesArticuloEsMenorQueCeroException
+   * @param fileName nombre del archivo
+   * @throws IOException entrada o salida
+   * @throws AlmacenCSVException almacen csv
+   * @throws UnidadesArticuloEsMenorQueCeroException unidades del articulo es menor que 0
    */
   public void loadCSV(String fileName) throws IOException, AlmacenCSVException, UnidadesArticuloEsMenorQueCeroException {
     var file = Files.newBufferedReader(Paths.get(fileName));
@@ -219,7 +219,7 @@ public class Almacen{
 
   /**
    * 
-   * @param articulo
+   * @param articulo articulo a añadir
    */
 
   private void annadir(Articulo articulo) {
@@ -235,9 +235,9 @@ public class Almacen{
   
   /**
    * 
-   * @param file
-   * @throws AlmacenCSVException
-   * @throws IOException
+   * @param file archivo
+   * @throws AlmacenCSVException almace csv 
+   * @throws IOException entrada o salida
    */
 
   private static void validateHeadCSV(BufferedReader file) throws AlmacenCSVException, IOException {
@@ -250,10 +250,10 @@ public class Almacen{
   
   /**
    * 
-   * @param line
+   * @param line linea
    * @return devuelve un articulo
-   * @throws AlmacenCSVException
-   * @throws UnidadesArticuloEsMenorQueCeroException
+   * @throws AlmacenCSVException Almacen CSV 
+   * @throws UnidadesArticuloEsMenorQueCeroException unidades arituclo menor que 0
    */
 
   private static Articulo newArticuloCSV(String line) throws AlmacenCSVException, UnidadesArticuloEsMenorQueCeroException {
@@ -279,8 +279,8 @@ public class Almacen{
   
   /**
    * 
-   * @param line
-   * @throws AlmacenCSVException
+   * @param line linea
+   * @throws AlmacenCSVException almacen csv
    */
 
   private static void validateArticuloCSV(String line) throws AlmacenCSVException {
@@ -297,9 +297,9 @@ public class Almacen{
 
   /**
    * 
-   * @param fileName
-   * @throws AlmacenXMLException
-   * @throws IOException
+   * @param fileName nombre del archivo
+   * @throws AlmacenXMLException almacen xml 
+   * @throws IOException entrada o salida
    */
 
   public void saveXML(String fileName) throws AlmacenXMLException, IOException {
@@ -319,7 +319,7 @@ public class Almacen{
   /**
    * 
    * @return devuelve un documento xml
-   * @throws ParserConfigurationException
+   * @throws ParserConfigurationException configuracion crear documento xml
    */
 
   private Document createDocumentXML() throws ParserConfigurationException {
@@ -331,7 +331,7 @@ public class Almacen{
   
   /**
    * 
-   * @param documento xml
+   * @param xml documento xml
    */
 
   private void saveRootXML(Document xml) {
@@ -341,8 +341,8 @@ public class Almacen{
   
   /**
    * 
-   * @param articulo
-   * @param xml
+   * @param articulo articulo
+   * @param xml documento xml
    */
 
   private void saveArticuloXML(Articulo articulo, Document xml) {
@@ -363,9 +363,9 @@ public class Almacen{
   
   /**
    * 
-   * @param attr
-   * @param value
-   * @param articuloElement
+   * @param attr attr
+   * @param value valor
+   * @param articuloElement elemento articulo
    */
 
   private void saveFieldArticuloXML(String attr, int value,Element articuloElement) {
@@ -379,9 +379,9 @@ public class Almacen{
   
   /**
    * 
-   * @param attr
-   * @param value
-   * @param articuloElement
+   * @param attr attr
+   * @param value valor
+   * @param articuloElement elemento articulo
    */
 
   private void saveFieldArticuloXML(String attr, double value,Element articuloElement) {
@@ -395,9 +395,9 @@ public class Almacen{
   
   /**
    * 
-   * @param attr
-   * @param value
-   * @param articuloElement
+   * @param attr attr
+   * @param value valor
+   * @param articuloElement elemento articulo
    */
 
   private void saveFieldArticuloXML(String attr, String value, Element articuloElement) {
@@ -406,6 +406,13 @@ public class Almacen{
     campoElement.appendChild(xml.createTextNode(value));
     articuloElement.appendChild(campoElement);
   }
+  /**
+   * 
+   * @param xml documento xml
+   * @param fileName nombre del archivo
+   * @throws IOException entrada o salida 
+   * @throws TransformerException transformar a xml
+   */
 
   private void saveFileXML(Document xml, String fileName) throws IOException, TransformerException {
     Transformer transformer = TransformerFactory.newInstance().newTransformer();
@@ -416,12 +423,12 @@ public class Almacen{
 
   /**
    * Recupera la agenda de un fichero XML y la devuelve como Almacen.
-   * @throws IOException 
-   * @throws UnidadesArticuloEsMenorQueCeroException 
-   * @throws AddressBookXMLException 
-   * @throws AddressBookCSVException 
+   * @param fileName nombre archivo
+   * @return un objeto almacen
+   * @throws IOException entrada o salida
+   * @throws AlmacenXMLException xml almacen
+   * @throws UnidadesArticuloEsMenorQueCeroException unidades articulo menor que 0
    */
-
   public Almacen loadXML(String fileName) throws IOException, AlmacenXMLException, UnidadesArticuloEsMenorQueCeroException {
     var almacen = new Almacen(); 
     try {
@@ -437,14 +444,15 @@ public class Almacen{
 
     return almacen;
   }
+
   
   /**
    * 
-   * @param fileName
+   * @param fileName nombre del archivo
    * @return un nuevo documento xml
-   * @throws ParserConfigurationException
-   * @throws SAXException
-   * @throws IOException
+   * @throws ParserConfigurationException de configuracion
+   * @throws SAXException  sax
+   * @throws IOException entrada o salida
    */
 
   private static Document newDocumentXML(String fileName) throws ParserConfigurationException, SAXException, IOException {
@@ -457,9 +465,9 @@ public class Almacen{
   
   /**
    * 
-   * @param itemArticulo
+   * @param itemArticulo item del arituclo
    * @return devuelve un nuevo articulo
-   * @throws UnidadesArticuloEsMenorQueCeroException
+   * @throws UnidadesArticuloEsMenorQueCeroException unidades del articulo menor que 0
    */
 
 
@@ -475,8 +483,8 @@ public class Almacen{
   
   /**
    * 
-   * @param field
-   * @param itemArticulo
+   * @param field campo 
+   * @param itemArticulo item del articulo
    * @return devuelve un campo
    */
 
@@ -488,7 +496,7 @@ public class Almacen{
   
   /**
    * 
-   * @param codigo
+   * @param codigo codigo del articulo a seleccionar
    * @return el indice del articulo que contiene el codigo
    */
 
@@ -499,12 +507,12 @@ public class Almacen{
   
   /**
    * 
-   * @param descripcion
-   * @param precioCompra
-   * @param precioVenta
-   * @param cantidadUnidades
-   * @param stockSeguridad
-   * @param stockMaximo
+   * @param descripcion descripcion de un articulo a crear
+   * @param precioCompra precio de compra de un articulo a crear
+   * @param precioVenta precio de venta de un articulo a crear
+   * @param cantidadUnidades cantidad de unidades de un articulo a crear
+   * @param stockSeguridad stock de seguridad de un articulo a crear
+   * @param stockMaximo stock maximo de un articulo a crear
    * @return devuelve un nuevo articulo
    * @throws UnidadesArticuloEsMenorQueCeroException Si las unidades del articulo es menor que cero
    */
@@ -535,7 +543,7 @@ public class Almacen{
   
   /**
    * 
-   * @param codigo
+   * @param codigo codigo de un articulo a mostrar
    * @return devuelve el indice del articulo que se corresponde con el codigo que se encuentra en el almacen
    */
 

@@ -7,7 +7,7 @@ package gestisimal;
 public class CantidadUnidadesEsMenorQueCeroException extends Exception {
   /**
    * 
-   * @param string
+   * @param string String
    */
   
   public CantidadUnidadesEsMenorQueCeroException(String string) {

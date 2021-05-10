@@ -32,10 +32,10 @@ public class TestAlmacen {
   
   /**
    * 
-   * @param args
-   * @throws UnidadesArticuloEsMenorQueCeroException
-   * @throws IOException
-   * @throws AlmacenCSVException
+   * @param args main
+   * @throws UnidadesArticuloEsMenorQueCeroException Unidades articulo menor que 0
+   * @throws IOException entrada o salida
+   * @throws AlmacenCSVException error csv 
    */
   public static void main (String [] args) throws UnidadesArticuloEsMenorQueCeroException, IOException, AlmacenCSVException   {
 

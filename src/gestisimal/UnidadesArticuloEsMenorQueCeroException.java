@@ -10,7 +10,7 @@ public class UnidadesArticuloEsMenorQueCeroException extends Exception {
   
   /**
    * 
-   * @param string
+   * @param string String
    */
   public UnidadesArticuloEsMenorQueCeroException (String string) {
     super(string);

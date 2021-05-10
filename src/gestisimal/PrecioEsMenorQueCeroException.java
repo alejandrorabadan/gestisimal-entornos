@@ -8,7 +8,7 @@ public class PrecioEsMenorQueCeroException extends RuntimeException {
   
   /**
    * 
-   * @param string
+   * @param string String
    */
   
   public PrecioEsMenorQueCeroException(String string) {

@@ -9,7 +9,7 @@ package gestisimal;
 public class CantidadEsMenorQueCeroException extends RuntimeException {
   /**
    * 
-   * @param string
+   * @param string String
    */
   
   public CantidadEsMenorQueCeroException (String string) {

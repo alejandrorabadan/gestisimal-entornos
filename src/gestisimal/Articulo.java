@@ -5,20 +5,44 @@ package gestisimal;
  * Como comportamiento: Consideramos que el código va a generarse de forma automática en el constructor, así no puede haber dos artículos con el 
  * mismo código. Esto implica que no puede modificarse el código de un artículo, sí el resto de las propiedades. 
  * Podremos mostrar el artículo, por lo que necesito una representación del artículo en forma de cadena (toString).</p>
- * @author alejandro
+ * @author alejandro rabdan rivas
  *
  */
 
 
 public class Articulo {
 
+  /**
+   * codigo
+   */
   private int codigo = 0;
+  /**
+   * codigo anterior para generar el codigo
+   */
   private static int codigoAnterior = 1;
+  /**
+   * descripcion de un articulo
+   */
   private String descripcion;
+  /**
+   * precio de compra de un articulo
+   */
   private double precioCompra;
+  /**
+   * precio de venta de un articulo
+   */
   private double precioVenta;
+  /**
+   * cantidad de unidades de un articulo
+   */
   private int cantidadUnidades;
+  /**
+   * stock seguridad de un articulo
+   */
   private int stockseguridad;
+  /**
+   * stock macimo de un articulo
+   */
   private int stockmaximo;
 
   /**
@@ -49,7 +73,7 @@ public class Articulo {
   
   /**
    * 
-   * @param codigo
+   * @param codigo codigo de un articulo
    */
 
   public Articulo(int codigo) {
@@ -123,7 +147,7 @@ public class Articulo {
   
   /**
    * Asigna la cantidad de unidades
-   * @param cantidadunidades 
+   * @param cantidadunidades cantidad de unidades de un articulo
    */
   public void setCantidadunidades(int cantidadunidades) {
     if (cantidadunidades < 0) {
@@ -142,7 +166,7 @@ public class Articulo {
   
   /**
    * Asigna el stock de seguridad
-   * @param stockseguridad 
+   * @param stockseguridad  stock de seguridad de un articulo
    */
   public void setStockseguridad(int stockseguridad) {
     this.stockseguridad = stockseguridad;
@@ -158,7 +182,7 @@ public class Articulo {
   
   /**
    * Asinga el stock maximo
-   * @param stockmaximo
+   * @param stockmaximo Stock Maximo del articulo
    */
   public void setStockmaximo(int stockmaximo) {
     this.stockmaximo = stockmaximo;

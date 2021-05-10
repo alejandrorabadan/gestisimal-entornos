@@ -8,7 +8,7 @@ package gestisimal;
 public class AlmacenXMLException extends Exception {
   /**
    * 
-   * @param message String
+   * @param message String 
    */
   public AlmacenXMLException(String message) {
     super(message);

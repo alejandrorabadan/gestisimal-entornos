@@ -14,9 +14,13 @@ import java.util.Scanner;
  *
  */
 public class Menu {
-  // titulo para el menu
+  /**
+   *  titulo para el menu
+   */
   String titulo;
-  // lista de opciones
+  /**
+   * Lista de opciones
+   */
   List<String> opciones;
   
   /**

@@ -7,7 +7,7 @@ package gestisimal;
 public class ArticuloYaExisteException extends RuntimeException {
   /**
    * 
-   * @param string
+   * @param string String
    */
 
   public ArticuloYaExisteException(String string){
