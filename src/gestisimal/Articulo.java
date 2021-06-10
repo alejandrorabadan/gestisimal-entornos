@@ -41,7 +41,7 @@ public class Articulo {
    */
   private int stockseguridad;
   /**
-   * stock macimo de un articulo
+   * stock maximo de un articulo
    */
   private int stockmaximo;
 
